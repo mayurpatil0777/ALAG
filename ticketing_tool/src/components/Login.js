@@ -8,7 +8,6 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
                 <div className="login">
                     <p>
                         <label>Email:</label>
@@ -23,10 +22,11 @@ class Login extends Component {
                     <p className="login-submit">
                         <button type="submit" className="login-button" onClick={this.props.submitBtn}><span>Login</span></button>
                     </p>
-
+                    <p className="">
+                        <button type="submit" className="login-button" onClick={this.props.submitBtn}><span>Login</span></button>
+                    </p>
                     <p className="forgot-password"><a href="/">Forgot your password?</a></p>
                 </div>
-            </div>
         );
     }
 }

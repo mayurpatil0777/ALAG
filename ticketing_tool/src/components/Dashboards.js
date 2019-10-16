@@ -25,7 +25,6 @@ class Dashboards extends Component {
                         </div>
                         <div className="col-md-11 mainDisp">
                             <Switch>
-
                                 <Route exact path='/first' component={FirstDashboard} />
                                 <Route exact path='/second' component={SecondDashboard} />
                                 <Route exact path='/third' component={ThirdDashboard} />
