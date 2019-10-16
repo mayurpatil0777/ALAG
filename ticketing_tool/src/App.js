@@ -1,13 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Login from './components/LoginComp/Login';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import MainParent from './components/MainParent';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'material-icons'
+
+//import FirstDashboard from './components/FirstDashboard'
 
 function App() {
   return (
-    <div className="">
-       {/* <header className="App-header">
+    <div className="col-md-12">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -15,8 +18,7 @@ function App() {
         
       </header>  */}
 
-<Login className="bg">
-</Login>
+      <MainParent></MainParent>
     </div>
   );
 }

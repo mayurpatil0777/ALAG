@@ -1,4 +1,4 @@
-body, .bg, form, .login-submit, .login-submit:before, .login-submit:after {
+ .bg, form, .login-submit, .login-submit:before, .login-submit:after {
     background: #373737;
   }
   
@@ -17,12 +17,14 @@ body, .bg, form, .login-submit, .login-submit:before, .login-submit:after {
   
   .login {
     position: relative;
-    margin: 15% auto;
+    margin: 120px auto;
     width: 400px;
     padding-right: 32px;
     font-weight: 300;
     color: #a8a7a8;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+    background:#404040;
+    padding:33px;
   }
   .login p {
     margin: 0 0 10px;
@@ -79,6 +81,8 @@ body, .bg, form, .login-submit, .login-submit:before, .login-submit:after {
     width: 48px;
     height: 48px;
     padding: 8px;
+    margin-top:34px!important;
+    box-shadow: 0px 0px 7px #ededed!important;
     border-radius: 32px;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
@@ -91,16 +95,17 @@ body, .bg, form, .login-submit, .login-submit:before, .login-submit:after {
   .login-submit:before {
     top: 28px;
     left: -4px;
-    width: 4px;
     height: 10px;
     -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
   }
   .login-submit:after {
-    top: -4px;
-    bottom: -4px;
-    right: -4px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
     width: 36px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
   }
   
   .login-button {
