@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Login from './Login';
+import Landing from './Landing';
 import Dashboards from './Dashboards';
-import '../cssFiles/dashboards.css'
+import '../cssFiles/dashboards.css';
+
 
 class MainParent extends Component {
     constructor(props) {
@@ -10,6 +11,7 @@ class MainParent extends Component {
             showLogin: true,
         }
     }
+
     submitBtn = () => {
         console.log("submit");
         this.setState({
@@ -20,7 +22,7 @@ class MainParent extends Component {
     render() {
         return (
             <div>
-                {this.state.showLogin ? <Login submitBtn={this.submitBtn}></Login> : <Dashboards></Dashboards>}
+                {this.state.showLogin ? <Landing submitBtn={this.submitBtn}></Landing> : <Dashboards></Dashboards>}
 
             </div>
         );

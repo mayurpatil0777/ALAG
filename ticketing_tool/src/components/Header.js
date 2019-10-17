@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
+import $ from 'jquery';
+
 
 class Header extends Component {
+   
+    logout=()=>{
+        console.log("logout");
+        window.location. reload();
+        
+    }
     render() {
         return (
             <div className="header">
@@ -19,9 +28,9 @@ class Header extends Component {
                             </li>
                         </ul>
                     </div>
-                    <span class="material-icons">home</span>
-                    <span class="material-icons">person</span>
-                    <span class="material-icons">logout</span>
+                    <span className="material-icons">home</span>
+                    <span className="material-icons">person</span>
+                    <NavLink to=''><span className="material-icons" data-toggle="tooltip" title="yes" onClick={this.logout}>logout</span></NavLink>
                 </nav>
             </div>
         );

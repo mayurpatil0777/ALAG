@@ -3,11 +3,13 @@ import React from 'react';
 import './App.css';
 import MainParent from './components/MainParent';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'material-icons'
+//import 'bootstrap/dist/js/bootstrap.min.js';
+import 'material-icons';
 
 //import FirstDashboard from './components/FirstDashboard'
 
 function App() {
+  
   return (
     <div className="col-md-12">
       {/* <header className="App-header">
