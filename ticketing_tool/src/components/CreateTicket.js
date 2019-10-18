@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CreateTask from './CreateTask';
 
-class FirstDashboard extends Component {
+class CreateTicket extends Component {
     render() {
         return (
            <div>
@@ -11,4 +11,4 @@ class FirstDashboard extends Component {
     }
 }
 
-export default FirstDashboard;
+export default CreateTicket;

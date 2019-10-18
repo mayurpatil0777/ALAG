@@ -73,3 +73,6 @@
   .btn{border-radius:0!important;}
   .reqLeft {border-left:2px solid red!important;}
   .borBott{border-bottom: 1px solid #ccc;}
+  .noDataBox{padding:100px;box-shadow:0px 0px 45px 1px #ccc;border-radius: 50%;}
+  .material-icons.noDataIcon{font-size:100px!important;text-align: center;}
+  .btn{cursor:pointer;}
