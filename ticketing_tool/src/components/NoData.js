@@ -9,7 +9,7 @@ class NoData extends Component {
                 <blockquote className="blockquote mx-auto text-center noDataBox">
                     <i className="material-icons mx-auto noDataIcon mb-4">label_off</i>
                     <p className="mb-0">You have not raised any ticket yet.</p>
-                    <NavLink to='/createTicket'><button type="button" className="btn btn-primary btn-block mt-4 mr-3">Create</button></NavLink>
+                    <NavLink to='/createTicket' className="txtDecorNo"><button type="button" className="btn btn-primary btn-block mt-4 mr-3">Create</button></NavLink>
 
                 </blockquote>
 

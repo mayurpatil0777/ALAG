@@ -36,7 +36,7 @@ class CreateTask extends Component {
                         </div>
                     </div>
                     <div className="col-md-3">
-                        <label>Priority</label>
+                        <label>Priority</label><br></br>
                         <label class="lblRad">Low
                     <input type="radio" name="radio" required />
                             <span class="checkmark"></span>
