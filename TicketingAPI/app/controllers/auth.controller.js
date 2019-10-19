@@ -1,6 +1,11 @@
-import Auth from '../Models/auth.model.js.js';
+const Auth = require('../../Models/auth.model.js');
 
-export function create(req, res) {
+
+exports.create = (req, res) => {
+
+
+// export function create(req, res)
+//  {
     // Validate request
     if(!req.body.content) {
         return res.status(400).send({
