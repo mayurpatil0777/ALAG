@@ -24,7 +24,7 @@ class Login extends Component {
                     </p>
                     <p className="forgot-password"><a>Forgot your password?</a></p>
 
-                    <p className="" onClick={this.props.register}><a>New User</a></p>
+                    <p className="" onClick={this.props.newUser}><a>New User</a></p>
                 </div>
             </div>
         );

@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
 
 const AuthSchema = mongoose.Schema({
-    title: String,
-    content: String
+    fName: String,
+    lName: String,
+    mailID: String,
+    uName: String,
+    pass: String,
+    confPass: String,
+    loginDiv: Boolean
 }, {
     timestamps: true
 });
 
-module.exports = mongoose.model('Auth', AuthSchema);
+module.exports = mongoose.model('Authd', AuthSchema);
