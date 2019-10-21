@@ -8,14 +8,14 @@ class Login extends Component {
                 <div className="login">
                     <p>
                         <label>Email:</label>
-                        <input type="text" name="login" id="login" placeholder="Enter 7 digit username" />
+                        <input type="text" name="loginUser" id="login" placeholder="Enter email" onChange={this.props.onLoginChange} />
                     </p>
 
                     <p>
                         <label>Password:</label>
-                        <input type="password" name="password" id="password" placeholder="Enter password" />
+                        <input type="password" name="password" id="password" placeholder="Enter password" onChange={this.props.onLoginChange} />
                     </p>
-
+                    {this.props.loginFailed ? <small className="form-text text-muted">{this.props.loginFailed}</small> : ''}
                     {/* <p className="login-submit">
                         <button type="submit" className="login-button" onClick={this.props.submitBtn}><span>Login</span></button>
                     </p> */}

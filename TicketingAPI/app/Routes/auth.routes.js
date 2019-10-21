@@ -5,10 +5,10 @@ module.exports = (app) => {
     app.post('/register',  notes.create);
 
     // Retrieve all Notes
-    // app.get('/notes', notes.findAll);
+     app.get('/login/:uName', notes.Login);
 
     // // Retrieve a single Note with noteId
-   // app.get('/notes/:noteId', notes.findOne);
+    app.get('/users/:uName', notes.LoginSingle);
 
     // // Update a Note with noteId
 

@@ -16,12 +16,13 @@ class Landing extends Component {
         /* this.setState({
             loginDiv: true
         }); */
+
         if (this.state.pass !== this.state.confPass) {
             console.log("plz confirm password");
             e.preventDefault();
-           this.setState({
-            confPassMsg : "Password and confirm password doesn't match!!!"
-           })
+            this.setState({
+                confPassMsg: "Password and confirm password doesn't match!!!"
+            })
         }
         else {
             axios({
@@ -36,8 +37,6 @@ class Landing extends Component {
         }
     }
 
-
-
     newUser = () => {
         this.setState({
             loginDiv: !this.state.loginDiv
@@ -47,18 +46,19 @@ class Landing extends Component {
     onRegChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
-
-
         })
-        //  console.log("newwww", this.state)
+       //   console.log("newwww", this.state)
     }
     render() {
         return (
             <div>
-                {this.state.loginDiv ? 
-                (<Login submitBtn={this.props.submitBtn} newUser={this.newUser} />) : 
-                <Register register={this.register} onRegChange={this.onRegChange}
-                confPassMsg={this.state.confPassMsg} />}
+                {this.state.loginDiv ?
+                    (<Login submitBtn={this.props.submitBtn} newUser={this.newUser} 
+                        onLoginChange={this.props.onLoginChange}
+                        loginFailed={this.props.loginFailed}/>) :
+                    <Register register={this.register} onRegChange={this.onRegChange}
+                        confPassMsg={this.state.confPassMsg}
+                        validMail={this.props.validMail} />}
             </div>
         );
     }

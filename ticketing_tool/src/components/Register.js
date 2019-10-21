@@ -18,9 +18,10 @@ class Register extends Component {
                     </div>
                     <div className="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control reqLeft" name="mailID" aria-describedby="emailHelp" placeholder="Enter email" 
+                        <input type="email" className="form-control reqLeft" name="mailID" id="emailID" aria-describedby="emailHelp" placeholder="Enter email" 
                         onChange={this.props.onRegChange} required/>
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                       {this.props.validMail ? <small id="emailHelp" className="form-text text-muted">{this.props.validMail}</small>:''}
                     </div>
                     <div className="form-group">
                         <label for="name">Username</label>

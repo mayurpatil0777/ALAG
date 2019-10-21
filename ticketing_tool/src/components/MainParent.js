@@ -2,27 +2,54 @@ import React, { Component } from 'react';
 import Landing from './Landing';
 import Dashboards from './Dashboards';
 import '../cssFiles/dashboards.css';
+import axios from 'axios'
 
 
 class MainParent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showLogin: true,
+            showLanding: true,
         }
     }
 
-    submitBtn = () => {
-        console.log("submit");
+    onLoginChange = (e) => {
         this.setState({
-            showLogin: false
+            [e.target.name]: e.target.value
         })
+               console.log("ststst",this.state)
+    }
+    submitBtn = (e) => {
+        console.log("submit");
+        axios.get('http://localhost:4000/login/'+ this.state.loginUser)
+            .then((res,e) => {
+                const logUser = res.data;
+                console.log("get baba   ",logUser)
+                if(logUser.pass !== this.state.password){
+                    this.setState({
+                        loginFailed: "Please enter valid credentials"
+                    })
+                e.preventDefault();
+                
+                }
 
+                this.setState({
+                    showLanding: logUser.loginDiv
+                })
+            }).catch((err)=>{
+           //     alert("errorrr")
+            })
+        
+        //console.log("sbmt",this.state)
     }
     render() {
         return (
             <div>
-                {this.state.showLogin ? <Landing submitBtn={this.submitBtn}></Landing> : <Dashboards></Dashboards>}
+                {this.state.showLanding ?
+                    <Landing submitBtn={this.submitBtn}
+                        onLoginChange={this.onLoginChange}
+                        loginFailed={this.state.loginFailed}></Landing>
+                    : <Dashboards></Dashboards>}
 
             </div>
         );
